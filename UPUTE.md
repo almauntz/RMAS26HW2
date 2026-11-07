@@ -12,7 +12,7 @@ Birate **jednu od dvije verzije zadaće**:
 | **A** | Složi svoju pizzu | 6 (+2 za bonus, poglavlje 4.3) |
 | **B** | Podijeli račun | 8 |
 
-Odabranu verziju upišite u `README.md` (polje `Verzija zadaće:`).
+Odabranu verziju upišite u `README.md` (polje `Verzija zadaće:`) i to uradite kao **prvi commit**.
 
 Uz upute dobijate **snimke ekrana referentnih aplikacija za obje verzije** (na Google Classroomu). Snimci pokazuju šta aplikacija treba raditi. **Izgled ne mora biti isti** (boje, raspored, ikone, gornja i donja traka su primjer, ne zahtjev), ali sva pravila iz uputa moraju raditi.
 
@@ -156,12 +156,11 @@ Cijena stavke = (osnovna cijena + dodaci) × količina.
    |---|---|
    | `STUDENT15` | 15% popusta na zbir pizza |
    | `MINUS5` | 5,00 KM popusta, **samo ako je zbir pizza najmanje 25,00 KM**. Inače se prikaže poruka „MINUS5 vrijedi od 25,00 KM" i popusta nema. |
-   | `DOSTAVA0` | besplatna dostava |
    | prazno | bez kupona |
    | bilo šta drugo | poruka „Nepoznat kupon" **ispod polja**, a račun se računa bez kupona |
 
    Vrste kupona predstavite kao **sealed tip**.
-3. **Dostava** (Switch) košta 3,00 KM. Dostava je **besplatna ako je iznos nakon popusta najmanje 30,00 KM**, ili ako je upisan `DOSTAVA0`. Pažnja: **popust se oduzima prije provjere praga od 30 KM.**
+3. **Dostava** (Switch) košta 3,00 KM. Dostava je **besplatna ako je iznos nakon popusta najmanje 30,00 KM**. Pažnja: **popust se oduzima prije provjere praga od 30 KM.**
 
 ### 4.5 Prikaz računa
 
@@ -183,7 +182,7 @@ Vaša aplikacija mora za ove ulaze dati tačno ove iznose.
 | A3 | 1× L: extra sir, tuna + 1× M: extra sir, gljive | da | `" MINUS5 "` | 34,00 | 5,00 | 3,00 | **32,00 KM** |
 | A4 | 2× S: extra sir | da | `MINUS5` | 18,00 | 0,00 (poruka) | 3,00 | **21,00 KM** |
 | A5 | 1× M: extra sir | da | `STUDENT15` | 12,50 | 1,88 | 3,00 | **13,62 KM** |
-| A6 | 1× M bez dodataka | da | `DOSTAVA0` | 11,00 | 0,00 | 0,00 | **11,00 KM** |
+| A6 | 1× M bez dodataka | da | – | 11,00 | 0,00 | 3,00 | **14,00 KM** |
 | A7 | 1× S: suho meso | da | `PIZZA50` | 10,00 | 0,00 („Nepoznat kupon") | 3,00 | **13,00 KM** |
 | A8 (bonus) | 1× L pola-pola (lijevo: extra sir, tuna · desno: gljive, masline, pileći parizer) + 1× M: extra sir, gljive | da | `MINUS5` | 34,00 | 5,00 | 3,00 | **32,00 KM** |
 
@@ -322,6 +321,8 @@ Zbirno: račun 28,10 · napojnica 4,21 · zaokruživanje 0,69 · **ukupno 33,00 
 ## 6. Šta se predaje
 
 U repozitoriju (na `main` grani, do roka):
+- **Prvi commit:** upisano slovo verzije zadaće (A ili B) u `README.md`.
+- **Najmanje 5 commitova** koji prate rad, npr. projekat, pa model i računanje, pa komponente, pa ekran. **Jedan veliki commit na kraju dovodi do smanjenog broja bodova.**
 - Android Studio projekat u korijenu repozitorija;
 - `README.md` s upisanom verzijom zadaće, imenom i prezimenom, i **odgovorima na pitanja** iz README-a. Odgovori se pišu vlastitim riječima, po 2–5 rečenica. Na odbrani se o njima pita.
 
