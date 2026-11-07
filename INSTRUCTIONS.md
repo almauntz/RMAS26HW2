@@ -12,7 +12,7 @@ Choose **one of two homework versions**:
 | **A** | Build your own pizza | 6 (+2 for the bonus, section 4.3) |
 | **B** | Split the bill | 8 |
 
-Write your chosen version in `README.md` (the `Homework version:` field).
+Write your chosen version in `README.md` (the `Homework version:` field) and make this your **first commit**.
 
 Together with the instructions you get **screen recordings of the reference apps for both versions** (on Google Classroom). The recordings show what the app should do. **The look does not have to be the same** (colours, layout, icons, top and bottom bars are an example, not a requirement), but all rules from the instructions must work.
 
@@ -158,12 +158,11 @@ Line price = (base price + toppings) × quantity.
    |---|---|
    | `STUDENT15` | 15% off the pizza subtotal |
    | `MINUS5` | 5.00 KM off, **only if the pizza subtotal is at least 25.00 KM**. Otherwise the message "MINUS5 is valid from 25.00 KM" is shown and there is no discount. |
-   | `DOSTAVA0` | free delivery |
    | empty | no coupon |
    | anything else | the message "Unknown coupon" **below the field**, and the bill is calculated without a coupon |
 
    Model the coupon types as a **sealed type**.
-3. **Delivery** (Switch) costs 3.00 KM. Delivery is **free if the amount after the discount is at least 30.00 KM**, or if `DOSTAVA0` is entered. Note: **the discount is subtracted before checking the 30 KM threshold.**
+3. **Delivery** (Switch) costs 3.00 KM. Delivery is **free if the amount after the discount is at least 30.00 KM**. Note: **the discount is subtracted before checking the 30 KM threshold.**
 
 ### 4.5 Bill display
 
@@ -185,7 +184,7 @@ Your app must give exactly these amounts for these inputs.
 | A3 | 1× L: extra cheese, tuna + 1× M: extra cheese, mushrooms | yes | `" MINUS5 "` | 34.00 | 5.00 | 3.00 | **32.00 KM** |
 | A4 | 2× S: extra cheese | yes | `MINUS5` | 18.00 | 0.00 (message) | 3.00 | **21.00 KM** |
 | A5 | 1× M: extra cheese | yes | `STUDENT15` | 12.50 | 1.88 | 3.00 | **13.62 KM** |
-| A6 | 1× M, no toppings | yes | `DOSTAVA0` | 11.00 | 0.00 | 0.00 | **11.00 KM** |
+| A6 | 1× M, no toppings | yes | – | 11.00 | 0.00 | 3.00 | **14.00 KM** |
 | A7 | 1× S: dried beef | yes | `PIZZA50` | 10.00 | 0.00 ("Unknown coupon") | 3.00 | **13.00 KM** |
 | A8 (bonus) | 1× L half-and-half (left: extra cheese, tuna · right: mushrooms, olives, chicken bologna) + 1× M: extra cheese, mushrooms | yes | `MINUS5` | 34.00 | 5.00 | 3.00 | **32.00 KM** |
 
@@ -324,6 +323,8 @@ Overall: bill 28.10 · tip 4.21 · rounding 0.69 · **total 33.00 KM**
 ## 6. What to submit
 
 In the repository (on the `main` branch, by the deadline):
+- **First commit:** the homework version letter (A or B) written in `README.md`.
+- **At least 5 commits** that follow your work, e.g. the project, then the model and calculation, then the components, then the screen. **One big commit at the end leads to fewer points.**
 - the Android Studio project in the root of the repository;
 - `README.md` with your homework version, your full name, and **answers to the questions** in the README. Write the answers in your own words, 2–5 sentences each. You will be asked about them at the defense.
 
