@@ -12,6 +12,8 @@ Upute: [UPUTE.md](UPUTE.md) · Instructions: [INSTRUCTIONS.md](INSTRUCTIONS.md)
 
 **Verzija zadaće / Homework version (A / B):**
 
+> Upišite slovo verzije i uradite commit ove izmjene kao **prvi commit**. / Write the version letter and commit this change as your **first commit**.
+
 ---
 
 ## Pitanja / Questions
